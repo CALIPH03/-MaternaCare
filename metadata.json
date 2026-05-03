@@ -1,0 +1,6 @@
+{
+  "name": "MaternaCare",
+  "description": "Offline-first digital labour monitoring PWA for Kenyan public health facilities, aligned with WHO 2020 protocol.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* MaternaCare Palette - Solidified from Bento Theme */
+  --color-m-teal: #0F6E56;
+  --color-m-teal-dark: #094d3c;
+  --color-m-amber: #BA7517;
+  --color-m-green: #639922;
+  --color-m-red: #A32D2D;
+  --color-m-indigo: #6366f1;
+  --color-m-gray-50: #f8fafc;
+  --color-m-gray-100: #f1f5f9;
+  --color-m-gray-200: #e2e8f0;
+  --color-m-gray-300: #cbd5e1;
+  --color-m-gray-400: #94a3b8;
+  --color-m-gray-500: #64748b;
+  --color-m-gray-600: #475569;
+  --color-m-gray-700: #334155;
+  --color-m-gray-800: #1e293b;
+  --color-m-gray-900: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Bento Card Styles */
+  .bento-card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm p-5 transition-all hover:shadow-md;
+  }
+
+  .bento-card-header {
+    @apply flex items-center gap-2 mb-4;
+  }
+
+  .bento-card-title {
+    @apply text-xs font-bold text-slate-400 uppercase tracking-widest;
+  }
+
+  .bento-card-identity {
+    @apply border-l-8 border-m-teal;
+  }
+
+  .bento-card-dark {
+    @apply bg-slate-900 text-slate-200 border-t-4 border-m-indigo;
+  }
+
+  .bento-card-alert {
+    @apply bg-[#FDF1E7] border border-m-amber/20;
+  }
+
+  /* Components Refinement */
+  .btn-primary {
+    @apply px-6 py-2.5 bg-m-teal text-white rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none flex items-center gap-2 shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2.5 bg-white border border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:bg-slate-50 transition-all active:scale-95 disabled:opacity-50;
+  }
+
+  .btn-danger {
+    @apply px-6 py-2.5 bg-m-red text-white rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2.5 text-slate-500 rounded-xl font-bold text-sm hover:bg-slate-100 transition-all;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-m-teal/10 focus:border-m-teal transition-all text-sm font-medium;
+  }
+
+  .form-label {
+    @apply block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5 ml-1;
+  }
+
+  .form-error {
+    @apply mt-1.5 text-[10px] text-m-red font-bold uppercase tracking-wide px-1;
+  }
+
+  .badge {
+    @apply text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider;
+  }
+
+  .badge-teal { @apply bg-m-teal/10 text-m-teal; }
+  .badge-amber { @apply bg-m-amber/10 text-m-amber; }
+  .badge-red { @apply bg-m-red/10 text-m-red; }
+  .badge-green { @apply bg-m-green/10 text-m-green; }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+}
